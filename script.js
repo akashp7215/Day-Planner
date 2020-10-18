@@ -73,7 +73,7 @@ var interval = setInterval(function() {
         hour = parseInt(hour);
         console.log(timeTest);
         console.log(hour);
-  //      console.log(this);
+  
         if (hour > timeTest) {
             $(this).addClass("past");
         } else if (hour < timeTest) {
@@ -84,3 +84,23 @@ var interval = setInterval(function() {
     });
   }
   
+  $(document).ready(function(){
+    initPage()
+    background()
+  
+    // To save in local
+    $(".saveBtn").on("click", function(){
+      userInput = $(this).siblings(".form-control").val().trim();
+      console.log(userInput);
+      hourSpan = $(this).siblings(".input-group-prepend").text().trim();
+      console.log(hourSpan);
+      localStorage.setItem(hourSpan, JSON.stringify(userInput));
+  
+    })
+    // Implementing a button to clear the whole day
+    $("#clearDay").on("click", function(){
+      localStorage.clear();
+      initPage()
+    }) 
+  
+  });
