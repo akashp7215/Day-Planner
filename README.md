@@ -6,3 +6,6 @@ This website is designed to empower individuals to plan and organize their day. 
 
 The technology used to implement these features and design include HTML, CSS, and jQuery.
 
+
+![image](https://user-images.githubusercontent.com/64104422/96387435-e4a51c00-116f-11eb-9fc1-729acf3728e1.png)
+
